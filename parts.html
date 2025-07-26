@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoServe NHW - Parts & Stock</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="favicon.png" alt="AutoServe NHW Logo" class="header-logo-img">
+                    <span class="site-title">AutoServe NHW</span>
+                </a>
+            </div>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="parts.html">Parts & Stock</a></li>
+                    <li><a href="quote.html">Request a Quote</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Light/Dark Theme">
+                            <i class="fas fa-moon light-icon"></i>
+                            <i class="fas fa-sun dark-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="parts-stock" class="section">
+            <div class="container">
+                <h2>Our Available Stock & Part Categories</h2>
+                <p>We maintain a dynamic inventory of both new and used parts. While our stock constantly updates, here are our primary categories. For specific availability, please use our quote request form.</p>
+
+                <h3>Part Categories:</h3>
+                <div class="categories-grid">
+                    <div class="category-item">Engine & Components</div>
+                    <div class="category-item">Transmission & Drivetrain</div>
+                    <div class="category-item">Braking Systems</div>
+                    <div class="category-item">Suspension & Steering</div>
+                    <div class="category-item">Electrical & Lighting</div>
+                    <div class="category-item">Body & Interior</div>
+                    <div class="category-item">Exhaust Systems</div>
+                    <div class="category-item">Cooling & Heating</div>
+                    <div class="category-item">Filters & Fluids</div>
+                    </div>
+
+                <h3>Available Stock Highlights:</h3>
+                <div class="stock-highlights">
+                    <p>Our current inventory includes a wide array of parts for Toyota, Nissan, Subaru, Mercedes-Benz, and many other popular models. This section can be updated regularly or connected to a database for real-time stock. For specific parts, requesting a quote is the fastest way to get accurate information.</p>
+                    <ul class="stock-list">
+                        <li><strong>Engine Blocks:</strong> Toyota 1NZ-FE, Nissan QR25DE, Subaru EJ20</li>
+                        <li><strong>Gearboxes:</strong> Automatic and Manual transmissions for various saloon cars.</li>
+                        <li><strong>Suspension Parts:</strong> Shock absorbers, control arms, bushings for a wide range of vehicles.</li>
+                        <li><strong>Headlights & Taillights:</strong> For Mercedes C-Class (W204), Toyota Premio (T260), etc.</li>
+                        <li><strong>Body Panels:</strong> Fenders, bumpers, doors for common models.</li>
+                    </ul>
+                    <a href="quote.html" class="btn primary-btn">Request a Specific Part</a>
+                </div>
+
+                <hr class="section-divider">
+
+                <h3>Explore Parts with a 3D Model (Advanced Feature)</h3>
+                <div class="feature-explanation">
+                    <p>An interactive 3D model of a vehicle, allowing you to explore different parts visually, is a highly engaging feature. Due to its complexity, it requires specialized development beyond standard web design (HTML/CSS/JS):</p>
+                    <ul>
+                        <li><strong>3D Model Creation:</strong> A detailed 3D model of a saloon car.</li>
+                        <li><strong>Web Graphics Libraries:</strong> Use of libraries like Three.js or Babylon.js to render and interact with the model in a web browser.</li>
+                        <li><strong>Interactive Logic:</strong> Programming to enable zooming, rotating, clicking on specific parts, and displaying information related to those parts.</li>
+                    </ul>
+                    <div class="placeholder-3d-model">
+                        <i class="fas fa-car fa-5x"></i>
+                        <p><strong>3D Interactive Car Model Placeholder</strong></p>
+                        <p>This area would house an interactive 3D model. <br>Please contact a WebGL/3D developer for implementation.</p>
+                        <img src="saloon_car_diagram.png" alt="Saloon Car Parts Diagram Placeholder" style="max-width: 100%; height: auto; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); filter: invert(1) hue-rotate(180deg) brightness(0.8);">
+                        <p style="font-size: 0.8em; color: #888;">(Replace 'saloon_car_diagram.png' with a 2D diagram for a simpler interactive experience)</p>
+                    </div>
+                    <p>For immediate visual assistance, a detailed 2D diagram of a vehicle with clickable areas could be a simpler alternative to start with.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AutoServe NHW. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/254799495876" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="scroll-buttons">
+        <button id="scroll-to-top-btn" class="scroll-btn scroll-to-top" aria-label="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <button id="scroll-to-bottom-btn" class="scroll-btn scroll-to-bottom" aria-label="Scroll to Bottom">
+            <i class="fas fa-arrow-down"></i>
+        </button>
+    </div>
+
+    <div class="chatbot-container">
+        <button class="chatbot-toggle-btn" aria-label="Open Chatbot">
+            <i class="fas fa-comment-dots"></i> AI Chat
+        </button>
+        <div class="chatbot-popup">
+            <div class="chatbot-header">
+                <h3>AutoServe AI Assistant <i class="fas fa-robot"></i></h3>
+                <button class="chatbot-close-btn">&times;</button>
+            </div>
+            <div class="chatbot-messages">
+                <div class="message bot-message">Hello! I'm your AutoServe AI Assistant. How can I help you today? Try asking about "new parts" or "brands".</div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" placeholder="Type your message..." class="chatbot-input">
+                <button class="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <p class="chatbot-disclaimer">
+                *This AI assistant provides basic information. For quotes, please use the "Request a Quote" page.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
