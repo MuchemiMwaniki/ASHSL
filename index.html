@@ -3,130 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoServe NHW - Quality Spare Parts</title>
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>AutoServe Holdings Ltd - Your Trusted Auto Parts Partner</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container header-content">
             <div class="logo">
                 <a href="index.html">
-                    <img src="ashsl_logo.png" alt="ASHSL Logo" class="header-logo-img">
-                    <span class="site-title">ASHSL</span>
+                    <img src="ashsl_logo.png" alt="AutoServe Holdings Ltd Logo" class="header-logo-img">
+                    <span class="site-title">AutoServe Holdings Ltd</span>
                 </a>
             </div>
             <nav>
-                <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="parts.html">Parts & Stock</a></li>
-                    <li><a href="quote.html">Request a Quote</a></li>
+                    <li><a href="catalogue.html">Catalogue</a></li>
+                    <li><a href="get-quote.html">Get a Quote</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li>
-                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Light/Dark Theme">
-                            <i class="fas fa-moon light-icon"></i>
-                            <i class="fas fa-sun dark-icon"></i>
-                        </button>
-                    </li>
                 </ul>
             </nav>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-sun light-icon"></i>
+                <i class="fas fa-moon dark-icon"></i>
+            </button>
+            <button class="menu-toggle" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
     <main>
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <img src="Autoserve Banner.png" alt="High Quality Auto Spare Parts" class="hero-image">
+        <section class="hero-section">
+            <div class="container hero-content">
+                <img src="hero.png" alt="AI Prompt Engineering & Smart Automation for Businesses" class="hero-image">
                 <div class="hero-text">
-                    <h1>Your Trusted Source for Quality Auto Spare Parts</h1>
-                    <p>Providing New and Used Spare Parts for All Makes and Models. Drive with Confidence.</p>
-                    <div class="hero-buttons">
-                        <a href="parts.html" class="btn primary-btn">Explore Parts</a>
-                        <a href="quote.html" class="btn secondary-btn">Get a Quote</a>
-                    </div>
+                    <h1>Your Premier Partner for Quality Auto Parts</h1>
+                    <p>At AutoServe Holdings Ltd, we provide a comprehensive range of genuine and aftermarket auto parts for all vehicle makes and models. Experience reliability and efficiency with every purchase.</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="catalogue.html" class="btn primary-btn">Explore Our Catalogue</a>
+                    <a href="get-quote.html" class="btn secondary-btn">Get a Custom Quote</a>
                 </div>
             </div>
         </section>
 
-        <section id="why-us" class="section">
+        <section class="section">
             <div class="container">
-                <h2>Why Choose ASHSL?</h2>
-                <div class="features-grid">
-                    <div class="feature-item">
+                <h2>Why Choose AutoServe?</h2>
+                <p class="section-description">We are committed to providing top-notch auto parts and exceptional service to our valued clients across Nairobi and beyond.</p>
+                <div class="contact-details-grid"> <div class="contact-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Quality Assurance</h3>
+                        <p>Only genuine and high-quality aftermarket parts sourced from trusted manufacturers.</p>
+                    </div>
+                    <div class="contact-card">
                         <i class="fas fa-cogs"></i>
-                        <h3>Vast Inventory</h3>
-                        <p>Thousands of new and used parts for diverse vehicle brands and models.</p>
+                        <h3>Extensive Inventory</h3>
+                        <p>A vast selection of parts for various vehicle makes, from sedans to heavy-duty trucks.</p>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Reliable Service</h3>
-                        <p>Dedicated team committed to helping you find the right part quickly.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-dollar-sign"></i>
-                        <h3>Competitive Pricing</h3>
-                        <p>Quality parts at prices that fit your budget.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-truck-fast"></i>
+                    <div class="contact-card">
+                        <i class="fas fa-truck"></i>
                         <h3>Fast Delivery</h3>
-                        <p>Efficient delivery services to get your parts to you when you need them.</p>
+                        <p>Efficient logistics ensuring timely delivery of your parts right to your doorstep.</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Expert Support</h3>
+                        <p>Our knowledgeable team is ready to assist you in finding the right part.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="call-to-action" class="section cta-section">
+        <section class="section">
             <div class="container">
-                <h2>Need a Specific Part?</h2>
-                <p>Use our quick quote request form to find what you're looking for.</p>
-                <a href="quote.html" class="btn primary-btn">Request Your Part Now</a>
+                <h2>Our Trusted Brands</h2>
+                <p class="section-description">We partner with leading global brands to ensure you get the best quality and performance for your vehicle.</p>
+                <div class="brands-grid">
+                    <img src="images/brand-logo-1.png" alt="Bosch Logo">
+                    <img src="images/brand-logo-2.png" alt="Denso Logo">
+                    <img src="images/brand-logo-3.png" alt="Mann-Filter Logo">
+                    <img src="images/brand-logo-4.png" alt="KYB Logo">
+                    <img src="images/brand-logo-5.png" alt="NGK Logo">
+                    <img src="images/brand-logo-6.png" alt="Filtra Logo">
+                    <img src="images/brand-logo-7.png" alt="Exedy Logo">
+                    <img src="images/brand-logo-8.png" alt="Monroe Logo">
+                </div>
+                <a href="about.html" class="btn secondary-btn">Learn More About Us</a>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>© 2025 ASHSL. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> AutoServe Holdings Ltd. All rights reserved.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/254799495876" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/YOURPHONENUMBER" class="whatsapp-btn" aria-label="Chat on WhatsApp" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <div class="scroll-buttons">
-        <button id="scroll-to-top-btn" class="scroll-btn scroll-to-top" aria-label="Scroll to Top">
-            <i class="fas fa-arrow-up"></i>
+        <button id="scrollToTopBtn" class="scroll-btn" aria-label="Scroll to top">
+            <i class="fas fa-chevron-up"></i>
         </button>
-        <button id="scroll-to-bottom-btn" class="scroll-btn scroll-to-bottom" aria-label="Scroll to Bottom">
-            <i class="fas fa-arrow-down"></i>
+        <button id="scrollToBottomBtn" class="scroll-btn scroll-to-bottom" aria-label="Scroll to bottom">
+            <i class="fas fa-chevron-down"></i>
         </button>
     </div>
 
     <div class="chatbot-container">
-        <button class="chatbot-toggle-btn" aria-label="Open Chatbot">
-            <i class="fas fa-comment-dots"></i> AI Chat
+        <button class="chatbot-toggle-btn" id="chatbotToggle">
+            <i class="fas fa-robot"></i> AI Assistant
         </button>
-        <div class="chatbot-popup">
+        <div class="chatbot-popup" id="chatbotPopup">
             <div class="chatbot-header">
-                <h3>ASHSL AI Assistant <i class="fas fa-robot"></i></h3>
-                <button class="chatbot-close-btn">×</button>
+                <h3><i class="fas fa-robot"></i> AutoServe AI</h3>
+                <button class="chatbot-close-btn" id="chatbotClose">&times;</button>
             </div>
-            <div class="chatbot-messages">
-                <div class="message bot-message">Hello! I'm your ASHSL AI Assistant. How can I help you today? Try asking about "new parts" or "brands".</div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">Hello! How can I assist you with auto parts today?</div>
             </div>
             <div class="chatbot-input-area">
-                <input type="text" placeholder="Type your message..." class="chatbot-input">
-                <button class="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
+                <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Type your message...">
+                <button id="chatbotSend" class="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
             </div>
-            <p class="chatbot-disclaimer">
-                *This AI assistant provides basic information. For quotes, please use the "Request a Quote" page.
-            </p>
+            <div class="chatbot-disclaimer">
+                This is an AI assistant and may not always provide accurate information.
+            </div>
         </div>
     </div>
 
