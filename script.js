@@ -147,8 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
             botResponse = "Our physical address is [Your Physical Address Here]. Please check our 'Contact Us' page for more details and working hours.";
         } else if (lowerCaseMessage.includes('stock') || lowerCaseMessage.includes('available')) {
             botResponse = "Our stock changes frequently. You can check our 'Parts & Stock' page for general categories, but for specific availability, please use the 'Request a Quote' form.";
-        } else if (lowerCaseMessage.includes('3d model') || lowerCaseMessage.includes('car model')) {
-             botResponse = "The interactive 3D car model is an advanced feature that requires specialized development. We are exploring its future implementation. For now, please check our 'Parts & Stock' page for general categories.";
+        } else if (lowerCaseMessage.includes('3d model') || lowerCaseMessage.includes('car model') || lowerCaseMessage.includes('2d model')) {
+             botResponse = "We're exploring interactive car models to help you identify parts. For now, check our 'Parts & Stock' page for general categories and highlights. For a specific part, please request a quote!";
         }
 
 
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDragging = false;
     let offsetX, offsetY;
 
-    chatbotHeader = document.querySelector('.chatbot-header'); // Re-select inside function or ensure global
+    let chatbotHeader = document.querySelector('.chatbot-header'); // Re-select inside function or ensure global
 
     chatbotHeader.addEventListener('mousedown', (e) => {
         isDragging = true;
@@ -182,4 +182,15 @@ document.addEventListener('DOMContentLoaded', () => {
         isDragging = false;
         chatbotPopup.style.cursor = 'grab';
     });
+
+
+    // Populate quote form from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const partName = urlParams.get('part');
+    if (partName) {
+        const partDescriptionField = document.getElementById('part-description');
+        if (partDescriptionField) {
+            partDescriptionField.value = `Looking for: ${decodeURIComponent(partName)}`;
+        }
+    }
 });
