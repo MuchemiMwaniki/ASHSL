@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoServe NHW - Request a Quote</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="favicon.png" alt="AutoServe NHW Logo" class="header-logo-img">
+                    <span class="site-title">AutoServe NHW</span>
+                </a>
+            </div>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="parts.html">Parts & Stock</a></li>
+                    <li><a href="quote.html">Request a Quote</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Light/Dark Theme">
+                            <i class="fas fa-moon light-icon"></i>
+                            <i class="fas fa-sun dark-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="quote-request" class="section">
+            <div class="container">
+                <h2>Request a Quote for Your Part</h2>
+                <p class="section-description">Fill out the form below with details about the part you're looking for. Our team will get back to you promptly with availability and pricing.</p>
+
+                <form class="quote-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company Name (Optional):</label>
+                        <input type="text" id="company" name="company" placeholder="ABC Auto Repair">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chassis-number">Vehicle Chassis Number:</label>
+                        <input type="text" id="chassis-number" name="chassis_number" required placeholder="JDFKL123ABC456789">
+                        <small>Providing the full chassis number helps us find the exact part.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="part-description">Part You Are Looking For:</label>
+                        <textarea id="part-description" name="part_description" rows="5" required placeholder="e.g., Left front shock absorber for Toyota Corolla 2015, Engine gasket set for Nissan X-Trail 2010"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-method">Preferred Contact Method:</label>
+                        <select id="contact-method" name="contact_method">
+                            <option value="email">Email</option>
+                            <option value="phone">Phone Call</option>
+                            <option value="whatsapp">WhatsApp</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-info">Your Contact Information (Email or Phone):</label>
+                        <input type="text" id="contact-info" name="contact_info" required placeholder="muchemimwaniki@gmail.com or 07XXXXXXXX">
+                    </div>
+
+                    <button type="submit" class="btn primary-btn">Submit Quote Request</button>
+                    <p class="form-note">
+                        *Note: This is a static HTML form. For actual submission, you would need a backend script (e.g., PHP, Node.js, or a form service) to process and send the data.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AutoServe NHW. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/254799495876" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="scroll-buttons">
+        <button id="scroll-to-top-btn" class="scroll-btn scroll-to-top" aria-label="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <button id="scroll-to-bottom-btn" class="scroll-btn scroll-to-bottom" aria-label="Scroll to Bottom">
+            <i class="fas fa-arrow-down"></i>
+        </button>
+    </div>
+
+    <div class="chatbot-container">
+        <button class="chatbot-toggle-btn" aria-label="Open Chatbot">
+            <i class="fas fa-comment-dots"></i> AI Chat
+        </button>
+        <div class="chatbot-popup">
+            <div class="chatbot-header">
+                <h3>AutoServe AI Assistant <i class="fas fa-robot"></i></h3>
+                <button class="chatbot-close-btn">&times;</button>
+            </div>
+            <div class="chatbot-messages">
+                <div class="message bot-message">Hello! I'm your AutoServe AI Assistant. How can I help you today? Try asking about "new parts" or "brands".</div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" placeholder="Type your message..." class="chatbot-input">
+                <button class="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <p class="chatbot-disclaimer">
+                *This AI assistant provides basic information. For quotes, please use the "Request a Quote" page.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
