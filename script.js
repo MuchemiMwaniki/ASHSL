@@ -1,67 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Theme Toggle Logic
-    const themeToggleBtn = document.getElementById('theme-toggle');
+    // Set current year in footer
+    const currentYearSpan = document.getElementById('current-year');
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+
+    // Mobile Navigation Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close nav when a link is clicked (for single-page navigation or after navigating)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    }
+
+    // Theme Toggle
+    const themeToggleBtn = document.querySelector('.theme-toggle');
     const body = document.body;
 
     // Check for saved theme preference or default to dark
-    if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-theme');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        body.classList.add(savedTheme);
     } else {
-        // Default to dark theme if no preference is set (or 'light' was explicitly saved)
-        // If you want default to light, remove this else block
-        body.classList.remove('dark-theme');
+        // Default to dark theme if no preference is saved
+        body.classList.add('dark-theme');
     }
 
-    themeToggleBtn.addEventListener('click', () => {
-        body.classList.toggle('dark-theme');
-        if (body.classList.contains('dark-theme')) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-        }
-    });
-
-    // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navList = document.querySelector('.nav-list');
-
-    menuToggle.addEventListener('click', () => {
-        navList.classList.toggle('active');
-    });
-
-    // Close mobile menu when a link is clicked
-    navList.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navList.classList.remove('active');
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            // Save preference to localStorage
+            if (body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark-theme');
+            } else {
+                localStorage.setItem('theme', 'light-theme');
+            }
         });
-    });
+    }
 
-    // Highlight active navigation link
-    const currentPath = window.location.pathname.split('/').pop();
-    const navLinks = document.querySelectorAll('nav .nav-list a');
-
-    navLinks.forEach(link => {
-        const linkPath = link.getAttribute('href');
-        if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
-
-
-    // Scroll To Top/Bottom Buttons Logic
-    const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
-    const scrollToBottomBtn = document.getElementById('scroll-to-bottom-btn');
+    // Scroll to Top/Bottom Buttons functionality
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    const scrollToBottomBtn = document.getElementById('scrollToBottomBtn');
 
     const toggleScrollButtons = () => {
-        if (window.scrollY > 300) { // Show after scrolling 300px
+        if (window.scrollY > 300) { // Show after scrolling 300px down
             scrollToTopBtn.classList.add('show');
         } else {
             scrollToTopBtn.classList.remove('show');
         }
 
-        // Show scroll-to-bottom if not at the very bottom
+        // Show scroll-to-bottom only if not at the very bottom
         if ((window.innerHeight + window.scrollY) < document.body.offsetHeight - 100) {
             scrollToBottomBtn.classList.add('show');
         } else {
@@ -69,128 +68,124 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    if (scrollToBottomBtn) {
+        scrollToBottomBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: document.body.offsetHeight,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Listen for scroll events to show/hide buttons
     window.addEventListener('scroll', toggleScrollButtons);
-    toggleScrollButtons(); // Initial check
+    // Initial check on page load
+    toggleScrollButtons();
 
-    scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+
+    // AI Chatbot Functionality (Placeholder)
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbotPopup = document.getElementById('chatbotPopup');
+    const chatbotClose = document.getElementById('chatbotClose');
+    const chatbotInput = document.getElementById('chatbotInput');
+    const chatbotSend = document.getElementById('chatbotSend');
+    const chatbotMessages = document.getElementById('chatbotMessages');
+
+    if (chatbotToggle && chatbotPopup && chatbotClose && chatbotInput && chatbotSend && chatbotMessages) {
+        chatbotToggle.addEventListener('click', () => {
+            chatbotPopup.classList.toggle('active');
+            if (chatbotPopup.classList.contains('active')) {
+                chatbotInput.focus(); // Focus on input when opened
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Scroll to bottom
+            }
         });
-    });
 
-    scrollToBottomBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: document.body.offsetHeight,
-            behavior: 'smooth'
+        chatbotClose.addEventListener('click', () => {
+            chatbotPopup.classList.remove('active');
         });
-    });
 
-    // AI Chatbot Logic
-    const chatbotToggleBtn = document.querySelector('.chatbot-toggle-btn');
-    const chatbotPopup = document.querySelector('.chatbot-popup');
-    const chatbotCloseBtn = document.querySelector('.chatbot-close-btn');
-    const chatbotInput = document.querySelector('.chatbot-input');
-    const chatbotSendBtn = document.querySelector('.chatbot-send-btn');
-    const chatbotMessages = document.querySelector('.chatbot-messages');
+        const sendMessage = () => {
+            const messageText = chatbotInput.value.trim();
+            if (messageText !== '') {
+                // Add user message to chat
+                const userMessageDiv = document.createElement('div');
+                userMessageDiv.classList.add('message', 'user-message');
+                userMessageDiv.textContent = messageText;
+                chatbotMessages.appendChild(userMessageDiv);
+                chatbotInput.value = ''; // Clear input
 
-    chatbotToggleBtn.addEventListener('click', () => {
-        chatbotPopup.classList.toggle('active');
-    });
+                // Simulate bot response (replace with actual AI integration later)
+                setTimeout(() => {
+                    const botMessageDiv = document.createElement('div');
+                    botMessageDiv.classList.add('message', 'bot-message');
+                    // Simple example response logic
+                    if (messageText.toLowerCase().includes('hello') || messageText.toLowerCase().includes('hi')) {
+                        botMessageDiv.textContent = 'Hello there! How can I help you find auto parts today?';
+                    } else if (messageText.toLowerCase().includes('part number')) {
+                        botMessageDiv.textContent = 'Please provide the part number, and I\'ll check our stock or help you find it!';
+                    } else if (messageText.toLowerCase().includes('catalogue')) {
+                        botMessageDiv.textContent = 'You can browse our full catalogue by clicking the "Catalogue" link in the navigation menu.';
+                    } else if (messageText.toLowerCase().includes('quote')) {
+                        botMessageDiv.textContent = 'To get a custom quote, please visit our "Get a Quote" page from the navigation bar.';
+                    } else if (messageText.toLowerCase().includes('contact')) {
+                        botMessageDiv.textContent = 'You can find our contact details, including phone numbers and email, on the "Contact Us" page.';
+                    }
+                    else {
+                        botMessageDiv.textContent = 'I am an AI assistant for auto parts. How else can I assist you?';
+                    }
+                    chatbotMessages.appendChild(botMessageDiv);
+                    chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Scroll to bottom after new message
+                }, 500); // Simulate network delay
+            }
+        };
 
-    chatbotCloseBtn.addEventListener('click', () => {
-        chatbotPopup.classList.remove('active');
-    });
+        chatbotSend.addEventListener('click', sendMessage);
 
-    chatbotInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            sendMessage();
-        }
-    });
+        chatbotInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
 
-    chatbotSendBtn.addEventListener('click', sendMessage);
+        // Chatbot Drag functionality
+        let isDragging = false;
+        let offset = { x: 0, y: 0 };
 
-    function sendMessage() {
-        const userMessage = chatbotInput.value.trim();
-        if (userMessage === '') return;
+        const startDrag = (e) => {
+            isDragging = true;
+            offset = {
+                x: e.clientX - chatbotPopup.getBoundingClientRect().left,
+                y: e.clientY - chatbotPopup.getBoundingClientRect().top
+            };
+            chatbotPopup.style.cursor = 'grabbing';
+        };
 
-        appendMessage(userMessage, 'user-message');
-        chatbotInput.value = '';
-        respondToUser(userMessage);
-    }
+        const onDrag = (e) => {
+            if (!isDragging) return;
+            e.preventDefault(); // Prevent text selection etc.
+            chatbotPopup.style.left = (e.clientX - offset.x) + 'px';
+            chatbotPopup.style.top = (e.clientY - offset.y) + 'px';
+        };
 
-    function appendMessage(text, type) {
-        const messageElement = document.createElement('div');
-        messageElement.classList.add('message', type);
-        messageElement.textContent = text;
-        chatbotMessages.appendChild(messageElement);
-        chatbotMessages.scrollTop = chatbotMessages.scrollHeight; // Auto-scroll to bottom
-    }
+        const endDrag = () => {
+            isDragging = false;
+            chatbotPopup.style.cursor = 'grab';
+        };
 
-    function respondToUser(userMessage) {
-        let botResponse = "I'm sorry, I don't understand that. Please try asking about 'new parts', 'used parts', 'brands', 'quote', or 'contact'.";
-        const lowerCaseMessage = userMessage.toLowerCase();
-
-        if (lowerCaseMessage.includes('hello') || lowerCaseMessage.includes('hi')) {
-            botResponse = "Hello! How can I assist you with auto spare parts today?";
-        } else if (lowerCaseMessage.includes('new parts')) {
-            botResponse = "We deal in a wide range of new spare parts directly sourced from manufacturers. What specific part are you looking for?";
-        } else if (lowerCaseMessage.includes('used parts')) {
-            botResponse = "Yes, we also offer quality used spare parts that are thoroughly inspected. They are a great cost-effective option!";
-        } else if (lowerCaseMessage.includes('brands')) {
-            botResponse = "We work with many popular brands like Toyota, Nissan, Mercedes-Benz, BMW, Ford, and more. You can see a full list on our About Us page!";
-        } else if (lowerCaseMessage.includes('quote') || lowerCaseMessage.includes('price') || lowerCaseMessage.includes('cost')) {
-            botResponse = "For a detailed quote, please visit our 'Request a Quote' page. We'll need your vehicle's chassis number and the part description.";
-        } else if (lowerCaseMessage.includes('contact') || lowerCaseMessage.includes('reach out')) {
-            botResponse = "You can contact us via phone at 0799495876, 0721491732, or 0734860036, or email us at autoservenhw@yahoo.com. Our 'Contact Us' page has all the details!";
-        } else if (lowerCaseMessage.includes('location') || lowerCaseMessage.includes('address')) {
-            botResponse = "Our physical address is [Your Physical Address Here]. Please check our 'Contact Us' page for more details and working hours.";
-        } else if (lowerCaseMessage.includes('stock') || lowerCaseMessage.includes('available')) {
-            botResponse = "Our stock changes frequently. You can check our 'Parts & Stock' page for general categories, but for specific availability, please use the 'Request a Quote' form.";
-        } else if (lowerCaseMessage.includes('3d model') || lowerCaseMessage.includes('car model') || lowerCaseMessage.includes('2d model')) {
-             botResponse = "We're exploring interactive car models to help you identify parts. For now, check our 'Parts & Stock' page for general categories and highlights. For a specific part, please request a quote!";
-        }
-
-
-        setTimeout(() => {
-            appendMessage(botResponse, 'bot-message');
-        }, 500); // Simulate typing delay
-    }
-
-    // Drag functionality for chatbot (optional, needs more robust implementation for real use)
-    let isDragging = false;
-    let offsetX, offsetY;
-
-    let chatbotHeader = document.querySelector('.chatbot-header'); // Re-select inside function or ensure global
-
-    chatbotHeader.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        offsetX = e.clientX - chatbotPopup.getBoundingClientRect().left;
-        offsetY = e.clientY - chatbotPopup.getBoundingClientRect().top;
-        chatbotPopup.style.cursor = 'grabbing';
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        chatbotPopup.style.left = `${e.clientX - offsetX}px`;
-        chatbotPopup.style.top = `${e.clientY - offsetY}px`;
-        chatbotPopup.style.right = 'auto'; // Disable right positioning during drag
-        chatbotPopup.style.bottom = 'auto'; // Disable bottom positioning during drag
-    });
-
-    document.addEventListener('mouseup', () => {
-        isDragging = false;
-        chatbotPopup.style.cursor = 'grab';
-    });
-
-
-    // Populate quote form from URL parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const partName = urlParams.get('part');
-    if (partName) {
-        const partDescriptionField = document.getElementById('part-description');
-        if (partDescriptionField) {
-            partDescriptionField.value = `Looking for: ${decodeURIComponent(partName)}`;
+        const chatbotHeader = document.querySelector('.chatbot-header');
+        if (chatbotHeader) {
+            chatbotHeader.addEventListener('mousedown', startDrag);
+            document.addEventListener('mousemove', onDrag);
+            document.addEventListener('mouseup', endDrag);
         }
     }
 });
