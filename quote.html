@@ -3,45 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASHSL - Request a Quote</title>
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Get a Quote - AutoServe Holdings Ltd</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container header-content">
             <div class="logo">
                 <a href="index.html">
-                    <img src="ashsl_logo.png" alt="ASHSL Logo" class="header-logo-img">
-                    <span class="site-title">ASHSL</span>
+                    <img src="ashsl_logo.png" alt="AutoServe Holdings Ltd Logo" class="header-logo-img">
+                    <span class="site-title">AutoServe Holdings Ltd</span>
                 </a>
             </div>
             <nav>
-                <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-                <ul class="nav-list">
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="parts.html">Parts & Stock</a></li>
-                    <li><a href="quote.html">Request a Quote</a></li>
+                    <li><a href="catalogue.html">Catalogue</a></li>
+                    <li><a href="get-quote.html" class="active">Get a Quote</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li>
-                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Light/Dark Theme">
-                            <i class="fas fa-moon light-icon"></i>
-                            <i class="fas fa-sun dark-icon"></i>
-                        </button>
-                    </li>
                 </ul>
             </nav>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-sun light-icon"></i>
+                <i class="fas fa-moon dark-icon"></i>
+            </button>
+            <button class="menu-toggle" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
     <main>
-        <section id="quote-request" class="section">
+        <section class="section">
             <div class="container">
-                <h2>Request a Quote for Your Part</h2>
-                <p class="section-description">Fill out the form below with details about the part you're looking for. Our team will get back to you promptly with availability and pricing.</p>
+                <h2>Request a Quote</h2>
+                <p class="section-description">Fill out the form below to get a personalized quote for the auto parts you need. Our team will get back to you promptly.</p>
 
                 <form class="quote-form" action="#" method="POST">
                     <div class="form-group">
@@ -50,39 +49,47 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="company">Company Name (Optional):</label>
-                        <input type="text" id="company" name="company" placeholder="ABC Auto Repair">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="john.doe@example.com">
                     </div>
 
                     <div class="form-group">
-                        <label for="chassis-number">Vehicle Chassis Number:</label>
-                        <input type="text" id="chassis-number" name="chassis_number" required placeholder="JDFKL123ABC456789">
-                        <small>Providing the full chassis number helps us find the exact part.</small>
+                        <label for="phone">Phone Number (Optional):</label>
+                        <input type="text" id="phone" name="phone" placeholder="+254 7XX XXX XXX">
                     </div>
 
                     <div class="form-group">
-                        <label for="part-description">Part You Are Looking For:</label>
-                        <textarea id="part-description" name="part_description" rows="5" required placeholder="e.g., Left front shock absorber for Toyota Corolla 2015, Engine gasket set for Nissan X-Trail 2010"></textarea>
+                        <label for="vehicle-make">Vehicle Make:</label>
+                        <input type="text" id="vehicle-make" name="vehicle-make" required placeholder="e.g., Toyota, Mercedes-Benz, Ford">
                     </div>
 
                     <div class="form-group">
-                        <label for="contact-method">Preferred Contact Method:</label>
-                        <select id="contact-method" name="contact_method">
-                            <option value="email">Email</option>
-                            <option value="phone">Phone Call</option>
-                            <option value="whatsapp">WhatsApp</option>
+                        <label for="vehicle-model">Vehicle Model:</label>
+                        <input type="text" id="vehicle-model" name="vehicle-model" required placeholder="e.g., Corolla, C200, Ranger">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year-of-manufacture">Year of Manufacture:</label>
+                        <input type="text" id="year-of-manufacture" name="year-of-manufacture" placeholder="e.g., 2015">
+                        <small>Provide the exact year or range.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="part-needed">Part(s) Needed:</label>
+                        <textarea id="part-needed" name="part-needed" rows="5" required placeholder="e.g., Front brake pads, Left headlight assembly, Engine oil filter (Part No: 12345-ABC)"></textarea>
+                        <small>Be as specific as possible. Include part numbers if known.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urgency">Urgency:</label>
+                        <select id="urgency" name="urgency">
+                            <option value="standard">Standard (3-5 business days)</option>
+                            <option value="urgent">Urgent (1-2 business days - may incur extra charges)</option>
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="contact-info">Your Contact Information (Email or Phone):</label>
-                        <input type="text" id="contact-info" name="contact_info" required placeholder="muchemimwaniki@gmail.com or 07XXXXXXXX">
-                    </div>
-
                     <button type="submit" class="btn primary-btn">Submit Quote Request</button>
-                    <p class="form-note">
-                        *Note: This is a static HTML form. For actual submission, you would need a backend script (e.g., PHP, Node.js, or a form service) to process and send the data.
-                    </p>
+                    <p class="form-note">Please note: This is a quote request, not a final order. We will contact you with pricing and availability.</p>
                 </form>
             </div>
         </section>
@@ -90,42 +97,42 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 ASHSL. All rights reserved.</p>
+            <p>&copy; <span id="current-year"></span> AutoServe Holdings Ltd. All rights reserved.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/254799495876" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/YOURPHONENUMBER" class="whatsapp-btn" aria-label="Chat on WhatsApp" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <div class="scroll-buttons">
-        <button id="scroll-to-top-btn" class="scroll-btn scroll-to-top" aria-label="Scroll to Top">
-            <i class="fas fa-arrow-up"></i>
+        <button id="scrollToTopBtn" class="scroll-btn" aria-label="Scroll to top">
+            <i class="fas fa-chevron-up"></i>
         </button>
-        <button id="scroll-to-bottom-btn" class="scroll-btn scroll-to-bottom" aria-label="Scroll to Bottom">
-            <i class="fas fa-arrow-down"></i>
+        <button id="scrollToBottomBtn" class="scroll-btn scroll-to-bottom" aria-label="Scroll to bottom">
+            <i class="fas fa-chevron-down"></i>
         </button>
     </div>
 
     <div class="chatbot-container">
-        <button class="chatbot-toggle-btn" aria-label="Open Chatbot">
-            <i class="fas fa-comment-dots"></i> AI Chat
+        <button class="chatbot-toggle-btn" id="chatbotToggle">
+            <i class="fas fa-robot"></i> AI Assistant
         </button>
-        <div class="chatbot-popup">
+        <div class="chatbot-popup" id="chatbotPopup">
             <div class="chatbot-header">
-                <h3>ASHSL AI Assistant <i class="fas fa-robot"></i></h3>
-                <button class="chatbot-close-btn">×</button>
+                <h3><i class="fas fa-robot"></i> AutoServe AI</h3>
+                <button class="chatbot-close-btn" id="chatbotClose">&times;</button>
             </div>
-            <div class="chatbot-messages">
-                <div class="message bot-message">Hello! I'm your ASHSL AI Assistant. How can I help you today? Try asking about "new parts" or "brands".</div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">Hello! How can I assist you with auto parts today?</div>
             </div>
             <div class="chatbot-input-area">
-                <input type="text" placeholder="Type your message..." class="chatbot-input">
-                <button class="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
+                <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Type your message...">
+                <button id="chatbotSend" class="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
             </div>
-            <p class="chatbot-disclaimer">
-                *This AI assistant provides basic information. For quotes, please use the "Request a Quote" page.
-            </p>
+            <div class="chatbot-disclaimer">
+                This is an AI assistant and may not always provide accurate information.
+            </div>
         </div>
     </div>
 
