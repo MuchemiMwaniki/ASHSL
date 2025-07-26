@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASHSL - Parts & Stock</title>
+    <!-- Favicon - Use your new ASHSL favicon or the MM image -->
     <link rel="icon" href="favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,6 +15,7 @@
         <div class="container header-content">
             <div class="logo">
                 <a href="index.html">
+                    <!-- New ASHSL Logo -->
                     <img src="ashsl_logo.png" alt="ASHSL Logo" class="header-logo-img">
                     <span class="site-title">ASHSL</span>
                 </a>
@@ -40,16 +42,79 @@
     <main>
         <section id="banner" class="section banner-section">
             <div class="container">
+                <!-- Using Autoserve Banner 2.png as banner for this page -->
                 <img src="Autoserve Banner 2.png" alt="Diverse Auto Spare Parts" class="section-banner-image">
             </div>
         </section>
 
-        <section id="parts-stock" class="section">
+        <section id="product-catalogue" class="section">
             <div class="container">
-                <h2>Our Available Stock & Part Categories</h2>
+                <h2>Our Product Catalogue</h2>
+                <p class="section-description">Browse through a selection of our popular and readily available spare parts. For our full inventory, please use the quote request form.</p>
+
+                <div class="product-grid">
+                    <!-- Product Card 1: Brake Pads -->
+                    <div class="product-card">
+                        <img src="https://placehold.co/400x300/1a1a1a/FFD700?text=Brake+Pads" alt="Brake Pads" class="product-image">
+                        <h3>Brake Pads (Front Set)</h3>
+                        <p>High-quality ceramic brake pads for superior stopping power and durability. Fits various saloon models.</p>
+                        <a href="quote.html?part=Brake%20Pads" class="btn secondary-btn small-btn">Request Quote</a>
+                    </div>
+
+                    <!-- Product Card 2: Shock Absorber -->
+                    <div class="product-card">
+                        <img src="https://placehold.co/400x300/1a1a1a/FFD700?text=Shock+Absorber" alt="Shock Absorber" class="product-image">
+                        <h3>Front Shock Absorber</h3>
+                        <p>Premium gas-charged shock absorber for enhanced ride comfort and vehicle stability. Left or Right available.</p>
+                        <a href="quote.html?part=Front%20Shock%20Absorber" class="btn secondary-btn small-btn">Request Quote</a>
+                    </div>
+
+                    <!-- Product Card 3: Oil Filter -->
+                    <div class="product-card">
+                        <img src="https://placehold.co/400x300/1a1a1a/FFD700?text=Oil+Filter" alt="Oil Filter" class="product-image">
+                        <h3>Engine Oil Filter</h3>
+                        <p>Essential for engine longevity, this filter ensures clean oil circulation. Compatible with many Japanese models.</p>
+                        <a href="quote.html?part=Engine%20Oil%20Filter" class="btn secondary-btn small-btn">Request Quote</a>
+                    </div>
+
+                    <!-- Product Card 4: Headlight Assembly -->
+                    <div class="product-card">
+                        <img src="https://placehold.co/400x300/1a1a1a/FFD700?text=Headlight" alt="Headlight Assembly" class="product-image">
+                        <h3>Headlight Assembly (Left)</h3>
+                        <p>Complete headlight unit, ensuring optimal visibility and safety. Specific models apply.</p>
+                        <a href="quote.html?part=Headlight%20Assembly" class="btn secondary-btn small-btn">Request Quote</a>
+                    </div>
+
+                    <!-- Product Card 5: Spark Plugs -->
+                    <div class="product-card">
+                        <img src="https://placehold.co/400x300/1a1a1a/FFD700?text=Spark+Plugs" alt="Spark Plugs" class="product-image">
+                        <h3>Iridium Spark Plugs (Set)</h3>
+                        <p>Enhance ignition performance and fuel efficiency. Available in sets of 4 or 6.</p>
+                        <a href="quote.html?part=Iridium%20Spark%20Plugs" class="btn secondary-btn small-btn">Request Quote</a>
+                    </div>
+
+                    <!-- Product Card 6: Air Filter -->
+                    <div class="product-card">
+                        <img src="https://placehold.co/400x300/1a1a1a/FFD700?text=Air+Filter" alt="Air Filter" class="product-image">
+                        <h3>Engine Air Filter</h3>
+                        <p>High-flow air filter designed to protect your engine from contaminants. Regular replacement recommended.</p>
+                        <a href="quote.html?part=Engine%20Air%20Filter" class="btn secondary-btn small-btn">Request Quote</a>
+                    </div>
+
+                    <!-- Add more product cards as needed -->
+
+                </div>
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="quote.html" class="btn primary-btn">Can't Find Your Part? Request a Quote!</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="parts-categories" class="section">
+            <div class="container">
+                <h2>Part Categories</h2>
                 <p>We maintain a dynamic inventory of both new and used parts. While our stock constantly updates, here are our primary categories. For specific availability, please use our quote request form.</p>
 
-                <h3>Part Categories:</h3>
                 <div class="categories-grid">
                     <div class="category-item">Engine & Components</div>
                     <div class="category-item">Transmission & Drivetrain</div>
@@ -60,7 +125,8 @@
                     <div class="category-item">Exhaust Systems</div>
                     <div class="category-item">Cooling & Heating</div>
                     <div class="category-item">Filters & Fluids</div>
-                    </div>
+                    <!-- Add more categories -->
+                </div>
 
                 <h3>Available Stock Highlights:</h3>
                 <div class="stock-highlights">
@@ -88,6 +154,7 @@
                         <i class="fas fa-car fa-5x"></i>
                         <p><strong>2D Interactive Car Model Placeholder</strong></p>
                         <p>This area would house an interactive 2D diagram of a saloon car. <br>Clickable areas could highlight parts and provide information.</p>
+                        <!-- Example: You would place your 2D diagram here, e.g. <img src="saloon_car_diagram.png" alt="Saloon Car Parts Diagram"> -->
                         <div class="diagram-placeholder">
                             <p>Image of a Saloon Car with clickable regions</p>
                             <img src="saloon_car_diagram.png" alt="Saloon Car Parts Diagram Placeholder" style="max-width: 100%; height: auto; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); filter: invert(1) hue-rotate(180deg) brightness(0.8);">
@@ -106,10 +173,12 @@
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/254799495876" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Scroll To Top/Down Buttons -->
     <div class="scroll-buttons">
         <button id="scroll-to-top-btn" class="scroll-btn scroll-to-top" aria-label="Scroll to Top">
             <i class="fas fa-arrow-up"></i>
@@ -119,6 +188,7 @@
         </button>
     </div>
 
+    <!-- AI Chatbot Placeholder -->
     <div class="chatbot-container">
         <button class="chatbot-toggle-btn" aria-label="Open Chatbot">
             <i class="fas fa-comment-dots"></i> AI Chat
@@ -141,6 +211,7 @@
         </div>
     </div>
 
+    <!-- Your Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
