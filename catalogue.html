@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Catalogue - AutoServe Holdings Ltd</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="ashsl_logo.png" alt="AutoServe Holdings Ltd Logo" class="header-logo-img">
+                    <span class="site-title">AutoServe Holdings Ltd</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="catalogue.html" class="active">Catalogue</a></li> <li><a href="get-quote.html">Get a Quote</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-sun light-icon"></i>
+                <i class="fas fa-moon dark-icon"></i>
+            </button>
+            <button class="menu-toggle" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section banner-section">
+            <div class="container">
+                <img src="Autoserve Banner 2.png" alt="Auto Parts Catalogue Banner" class="section-banner-image">
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Our Product Catalogue</h2>
+                <p class="section-description">Explore our extensive range of high-quality auto parts and accessories. We stock genuine and aftermarket parts for various vehicle makes and models.</p>
+
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="ProductImages/ac-filter-87139-front.jpeg" alt="A/C Cabin Filter 87139-06050" class="product-image">
+                        <h3>A/C Cabin Filter</h3>
+                        <p>High-quality A/C Cabin Filter, Part Number: 87139-06050. Ensures clean and fresh air inside your vehicle.</p>
+                        <span class="product-price">Ksh 600</span>
+                        <a href="get-quote.html" class="btn primary-btn small-btn">Enquire Now</a>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="engine-filter.png" alt="Engine Oil Filter" class="product-image">
+                        <h3>Engine Oil Filter</h3>
+                        <p>High-efficiency oil filter designed for optimal engine protection and longevity. Compatible with various sedan models.</p>
+                        <span class="product-price">Ksh 1,500</span>
+                        <a href="get-quote.html" class="btn primary-btn small-btn">Enquire Now</a>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="brake-pads.png" alt="Ceramic Brake Pads" class="product-image">
+                        <h3>Ceramic Brake Pads</h3>
+                        <p>Premium ceramic brake pads offering superior stopping power, reduced dust, and quiet operation. For SUVs and trucks.</p>
+                        <span class="product-price">Ksh 4,800</span>
+                        <a href="get-quote.html" class="btn primary-btn small-btn">Enquire Now</a>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="shock-absorber.png" alt="Heavy Duty Shock Absorber" class="product-image">
+                        <h3>Heavy Duty Shock Absorber</h3>
+                        <p>Robust shock absorber for enhanced stability and comfort on rough terrains. Ideal for 4x4 vehicles.</p>
+                        <span class="product-price">Ksh 8,200</span>
+                        <a href="get-quote.html" class="btn primary-btn small-btn">Enquire Now</a>
+                    </div>
+
+                    </div>
+            </div>
+        </section>
+
+        <section class="section-divider"></section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Can't Find What You Need?</h2>
+                <p class="section-description">Our catalogue is regularly updated, but if you don't see the specific part you're looking for, don't hesitate to reach out!</p>
+                <a href="get-quote.html" class="btn primary-btn">Request a Custom Quote</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> AutoServe Holdings Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/YOURPHONENUMBER" class="whatsapp-btn" aria-label="Chat on WhatsApp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="scroll-buttons">
+        <button id="scrollToTopBtn" class="scroll-btn" aria-label="Scroll to top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+        <button id="scrollToBottomBtn" class="scroll-btn scroll-to-bottom" aria-label="Scroll to bottom">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+    </div>
+
+    <div class="chatbot-container">
+        <button class="chatbot-toggle-btn" id="chatbotToggle">
+            <i class="fas fa-robot"></i> AI Assistant
+        </button>
+        <div class="chatbot-popup" id="chatbotPopup">
+            <div class="chatbot-header">
+                <h3><i class="fas fa-robot"></i> AutoServe AI</h3>
+                <button class="chatbot-close-btn" id="chatbotClose">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">Hello! How can I assist you with auto parts today?</div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Type your message...">
+                <button id="chatbotSend" class="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <div class="chatbot-disclaimer">
+                This is an AI assistant and may not always provide accurate information.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
