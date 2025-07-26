@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoServe NHW - Parts & Stock</title>
+    <title>ASHSL - Parts & Stock</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,12 +14,12 @@
         <div class="container header-content">
             <div class="logo">
                 <a href="index.html">
-                    <img src="favicon.png" alt="AutoServe NHW Logo" class="header-logo-img">
-                    <span class="site-title">AutoServe NHW</span>
+                    <img src="ashsl_logo.png" alt="ASHSL Logo" class="header-logo-img">
+                    <span class="site-title">ASHSL</span>
                 </a>
             </div>
             <nav>
-                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+                <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -38,6 +38,12 @@
     </header>
 
     <main>
+        <section id="banner" class="section banner-section">
+            <div class="container">
+                <img src="Autoserve Banner 2.png" alt="Diverse Auto Spare Parts" class="section-banner-image">
+            </div>
+        </section>
+
         <section id="parts-stock" class="section">
             <div class="container">
                 <h2>Our Available Stock & Part Categories</h2>
@@ -71,22 +77,24 @@
 
                 <hr class="section-divider">
 
-                <h3>Explore Parts with a 3D Model (Advanced Feature)</h3>
+                <h3>Explore Parts with a 2D Interactive Car Model (Recommended Alternative)</h3>
                 <div class="feature-explanation">
-                    <p>An interactive 3D model of a vehicle, allowing you to explore different parts visually, is a highly engaging feature. Due to its complexity, it requires specialized development beyond standard web design (HTML/CSS/JS):</p>
+                    <p>While a full 3D interactive car model is a complex development project, a **2D interactive diagram** is a more achievable and still highly useful feature. This allows users to click on different sections of a car image to reveal information about parts in that area.</p>
                     <ul>
-                        <li><strong>3D Model Creation:</strong> A detailed 3D model of a saloon car.</li>
-                        <li><strong>Web Graphics Libraries:</strong> Use of libraries like Three.js or Babylon.js to render and interact with the model in a web browser.</li>
-                        <li><strong>Interactive Logic:</strong> Programming to enable zooming, rotating, clicking on specific parts, and displaying information related to those parts.</li>
+                        <li><strong>How it works:</strong> You would use an SVG image or a high-resolution PNG of a saloon car diagram. JavaScript would then be used to define "hotspots" or clickable areas on that image. When a user clicks a hotspot, a popup or side panel would display details about the parts in that section.</li>
+                        <li><strong>Benefits:</strong> Easier to implement, loads faster, and still provides a great visual way for customers to identify and learn about parts.</li>
                     </ul>
-                    <div class="placeholder-3d-model">
+                    <div class="placeholder-2d-model">
                         <i class="fas fa-car fa-5x"></i>
-                        <p><strong>3D Interactive Car Model Placeholder</strong></p>
-                        <p>This area would house an interactive 3D model. <br>Please contact a WebGL/3D developer for implementation.</p>
-                        <img src="saloon_car_diagram.png" alt="Saloon Car Parts Diagram Placeholder" style="max-width: 100%; height: auto; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); filter: invert(1) hue-rotate(180deg) brightness(0.8);">
-                        <p style="font-size: 0.8em; color: #888;">(Replace 'saloon_car_diagram.png' with a 2D diagram for a simpler interactive experience)</p>
+                        <p><strong>2D Interactive Car Model Placeholder</strong></p>
+                        <p>This area would house an interactive 2D diagram of a saloon car. <br>Clickable areas could highlight parts and provide information.</p>
+                        <div class="diagram-placeholder">
+                            <p>Image of a Saloon Car with clickable regions</p>
+                            <img src="saloon_car_diagram.png" alt="Saloon Car Parts Diagram Placeholder" style="max-width: 100%; height: auto; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); filter: invert(1) hue-rotate(180deg) brightness(0.8);">
+                        </div>
+                        <p style="font-size: 0.8em; color: #888; margin-top: 10px;">(Please replace `saloon_car_diagram.png` with your actual 2D car diagram.)</p>
                     </div>
-                    <p>For immediate visual assistance, a detailed 2D diagram of a vehicle with clickable areas could be a simpler alternative to start with.</p>
+                    <p>Implementing a 2D interactive model would involve: creating or sourcing a suitable 2D car diagram, mapping coordinates for different parts, and writing JavaScript to handle click events and display part information dynamically. This is a task that would require additional dedicated development.</p>
                 </div>
             </div>
         </section>
@@ -94,7 +102,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 AutoServe NHW. All rights reserved.</p>
+            <p>© 2025 ASHSL. All rights reserved.</p>
         </div>
     </footer>
 
@@ -117,11 +125,11 @@
         </button>
         <div class="chatbot-popup">
             <div class="chatbot-header">
-                <h3>AutoServe AI Assistant <i class="fas fa-robot"></i></h3>
-                <button class="chatbot-close-btn">&times;</button>
+                <h3>ASHSL AI Assistant <i class="fas fa-robot"></i></h3>
+                <button class="chatbot-close-btn">×</button>
             </div>
             <div class="chatbot-messages">
-                <div class="message bot-message">Hello! I'm your AutoServe AI Assistant. How can I help you today? Try asking about "new parts" or "brands".</div>
+                <div class="message bot-message">Hello! I'm your ASHSL AI Assistant. How can I help you today? Try asking about "new parts" or "brands".</div>
             </div>
             <div class="chatbot-input-area">
                 <input type="text" placeholder="Type your message..." class="chatbot-input">
