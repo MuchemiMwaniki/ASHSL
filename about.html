@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AutoServe NHW</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="favicon.png" alt="AutoServe NHW Logo" class="header-logo-img">
+                    <span class="site-title">AutoServe NHW</span>
+                </a>
+            </div>
+            <nav>
+                <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="parts.html">Parts & Stock</a></li>
+                    <li><a href="quote.html">Request a Quote</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Light/Dark Theme">
+                            <i class="fas fa-moon light-icon"></i>
+                            <i class="fas fa-sun dark-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about-us" class="section">
+            <div class="container">
+                <h2>About AutoServe NHW</h2>
+                <div class="about-content">
+                    <p>Welcome to **AutoServe NHW**, your premier destination for high-quality automotive spare parts. Located in Nairobi, Kenya, we pride ourselves on being a reliable source for both **new and used spare parts**, catering to a wide range of vehicle makes and models.</p>
+                    <p>Our mission is to ensure your vehicle runs smoothly and safely by providing genuine and reliable parts at competitive prices. We understand the importance of quality and efficiency in getting your vehicle back on the road, which is why we meticulously source our inventory to meet diverse customer needs.</p>
+
+                    <h3>What We Offer:</h3>
+                    <ul>
+                        <li><strong>New Spare Parts:</strong> Directly sourced from reputable manufacturers and distributors, ensuring authenticity and durability.</li>
+                        <li><strong>Used Spare Parts:</strong> Carefully inspected and tested pre-owned parts that offer a cost-effective solution without compromising on quality.</li>
+                    </ul>
+
+                    <h3>Brands We Work With:</h3>
+                    <p>We supply parts for a comprehensive list of international and local vehicle brands, including but not limited to:</p>
+                    <div class="brands-grid">
+                        <span>Toyota</span>
+                        <span>Nissan</span>
+                        <span>Mitsubishi</span>
+                        <span>Subaru</span>
+                        <span>Honda</span>
+                        <span>Mazda</span>
+                        <span>Mercedes-Benz</span>
+                        <span>BMW</span>
+                        <span>Audi</span>
+                        <span>Volkswagen</span>
+                        <span>Ford</span>
+                        <span>Chevrolet</span>
+                        <span>Hyundai</span>
+                        <span>Kia</span>
+                        <span>Isuzu</span>
+                        <span>Hino</span>
+                        </div>
+                    <p>Whether you're looking for parts for a saloon car, SUV, commercial vehicle, or truck, AutoServe NHW is your one-stop shop.</p>
+                    <p>Our commitment extends beyond just sales; we aim to build lasting relationships with our customers through transparent service and expert advice. Our knowledgeable team is always ready to assist you in finding the exact part you need.</p>
+                    <a href="contact.html" class="btn primary-btn">Contact Our Team</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AutoServe NHW. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/254799495876" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="scroll-buttons">
+        <button id="scroll-to-top-btn" class="scroll-btn scroll-to-top" aria-label="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <button id="scroll-to-bottom-btn" class="scroll-btn scroll-to-bottom" aria-label="Scroll to Bottom">
+            <i class="fas fa-arrow-down"></i>
+        </button>
+    </div>
+
+    <div class="chatbot-container">
+        <button class="chatbot-toggle-btn" aria-label="Open Chatbot">
+            <i class="fas fa-comment-dots"></i> AI Chat
+        </button>
+        <div class="chatbot-popup">
+            <div class="chatbot-header">
+                <h3>AutoServe AI Assistant <i class="fas fa-robot"></i></h3>
+                <button class="chatbot-close-btn">&times;</button>
+            </div>
+            <div class="chatbot-messages">
+                <div class="message bot-message">Hello! I'm your AutoServe AI Assistant. How can I help you today? Try asking about "new parts" or "brands".</div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" placeholder="Type your message..." class="chatbot-input">
+                <button class="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+            <p class="chatbot-disclaimer">
+                *This AI assistant provides basic information. For quotes, please use the "Request a Quote" page.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
