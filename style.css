@@ -503,6 +503,25 @@ body.dark-theme .brands-grid span:hover {
 }
 
 /* --- Parts Page Specifics --- */
+.banner-section {
+    background-color: var(--background-color-light); /* Match page background for seamless look */
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+body.dark-theme .banner-section {
+    background-color: var(--background-color-dark);
+}
+.section-banner-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+
 .categories-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -618,7 +637,7 @@ body.dark-theme .feature-explanation p, body.dark-theme .feature-explanation ul 
     margin-bottom: 5px;
 }
 
-.placeholder-3d-model {
+.placeholder-2d-model { /* Changed from .placeholder-3d-model */
     background-color: #000;
     color: #FFD700;
     padding: 40px 20px;
@@ -632,17 +651,32 @@ body.dark-theme .feature-explanation p, body.dark-theme .feature-explanation ul 
     min-height: 300px;
     text-align: center;
 }
-body.dark-theme .placeholder-3d-model {
+body.dark-theme .placeholder-2d-model { /* Changed from .placeholder-3d-model */
     border-color: var(--link-color-dark);
     color: var(--link-color-dark);
 }
-.placeholder-3d-model i {
+.placeholder-2d-model i {
     margin-bottom: 20px;
 }
-.placeholder-3d-model p {
+.placeholder-2d-model p {
     font-size: 1.1rem;
     margin-top: 10px;
 }
+
+.diagram-placeholder {
+    background-color: var(--section-bg-light);
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    color: var(--text-color-light);
+}
+body.dark-theme .diagram-placeholder {
+    background-color: var(--section-bg-dark);
+    border-color: var(--border-color-dark);
+    color: var(--text-color-dark);
+}
+
 
 /* --- Quote Form Specifics --- */
 .quote-form {
@@ -1142,6 +1176,7 @@ body.dark-theme .chatbot-send-btn {
 }
 body.dark-theme .chatbot-send-btn:hover {
     background-color: var(--hover-color-dark);
+    transform: scale(1.05);
 }
 
 .chatbot-disclaimer {
