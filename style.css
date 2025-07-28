@@ -1,40 +1,42 @@
 /* General Body and Container Styles */
 :root {
-    --primary-color: #0056b3; /* A shade of blue - your main brand color */
-    --secondary-color: #f8f9fa; /* Light gray */
-    --background-color: #ffffff; /* White background for light mode */
-    --text-color-primary: #333333; /* Dark gray for main text */
-    --text-color-secondary: #555555; /* Medium gray for secondary text */
-    --header-footer-bg: #e9ecef; /* Light background for header/footer */
-    --border-color: #dee2e6; /* Light border color */
-    --button-primary-bg: #007bff; /* Primary button blue */
-    --button-primary-hover: #0056b3;
-    --button-secondary-bg: #6c757d; /* Secondary button gray */
-    --button-secondary-hover: #545b62;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --box-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.2);
-    --card-background: #ffffff;
-    --section-divider-color: #cccccc;
-    --accent-color: #FF8C00; /* A bright orange for contrast - used for contact links */
+    /* Black and Gold Theme - Light Mode */
+    --primary-color: #DAA520; /* Rich Gold - for accents, active states, important text */
+    --secondary-color: #f0f0f0; /* Very light gray - for subtle backgrounds */
+    --background-color: #ffffff; /* White background for main content */
+    --text-color-primary: #1a1a1a; /* Deep Black for main text */
+    --text-color-secondary: #333333; /* Slightly lighter black for secondary text */
+    --header-footer-bg: #1a1a1a; /* Deep Black for header/footer background */
+    --border-color: #e0e0e0; /* Light gray for borders */
+    --button-primary-bg: #FFD700; /* Bright Gold for primary buttons */
+    --button-primary-hover: #DAA520; /* Rich Gold on hover */
+    --button-secondary-bg: #555555; /* Dark gray for secondary buttons */
+    --button-secondary-hover: #333333; /* Darker gray on hover */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly darker shadow for contrast */
+    --box-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.3);
+    --card-background: #ffffff; /* White cards */
+    --section-divider-color: #666666; /* Darker divider */
+    --accent-color: #FFD700; /* Consistent bright gold for various accents/links */
 }
 
 body.dark-mode {
-    --primary-color: #4CAF50; /* Green for dark mode primary */
-    --secondary-color: #343a40; /* Dark gray */
-    --background-color: #212529; /* Dark background */
-    --text-color-primary: #f8f9fa; /* Light text */
-    --text-color-secondary: #ced4da; /* Lighter gray text */
-    --header-footer-bg: #343a40;
-    --border-color: #495057;
-    --button-primary-bg: #4CAF50;
-    --button-primary-hover: #45a049;
-    --button-secondary-bg: #6c757d;
-    --button-secondary-hover: #545b62;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    --box-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.4);
-    --card-background: #343a40;
-    --section-divider-color: #6c757d;
-    --accent-color: #FFA500; /* A slightly different orange for dark mode visibility */
+    /* Black and Gold Theme - Dark Mode */
+    --primary-color: #FFD700; /* Bright Gold - for accents, active states, important text */
+    --secondary-color: #333333; /* Dark gray */
+    --background-color: #1a1a1a; /* Deep Black background */
+    --text-color-primary: #f8f9fa; /* Off-white text */
+    --text-color-secondary: #e0e0e0; /* Light gray text */
+    --header-footer-bg: #000000; /* Pure Black for header/footer background */
+    --border-color: #444444; /* Darker gray for borders */
+    --button-primary-bg: #FFD700; /* Bright Gold for primary buttons */
+    --button-primary-hover: #DAA520; /* Rich Gold on hover */
+    --button-secondary-bg: #777777; /* Medium gray for secondary buttons */
+    --button-secondary-hover: #555555; /* Darker gray on hover */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    --box-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.6);
+    --card-background: #222222; /* Darker cards */
+    --section-divider-color: #444444; /* Darker divider */
+    --accent-color: #FFD700; /* Consistent bright gold for various accents/links */
 }
 
 body {
@@ -45,7 +47,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color-primary);
     line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Ensure transitions are here */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -90,7 +92,7 @@ header {
 .site-title {
     font-size: 1.5em;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Gold text for site title */
     white-space: nowrap; /* Prevent title from wrapping */
 }
 
@@ -107,7 +109,7 @@ nav .nav-links li {
 
 nav .nav-links a {
     text-decoration: none;
-    color: var(--text-color-primary);
+    color: var(--text-color-primary); /* Default link color (black/off-white) */
     font-weight: bold;
     padding: 5px 0;
     transition: color 0.3s ease;
@@ -115,7 +117,7 @@ nav .nav-links a {
 
 nav .nav-links a:hover,
 nav .nav-links a.active {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Gold on hover/active */
 }
 
 .theme-toggle, .menu-toggle {
@@ -123,13 +125,13 @@ nav .nav-links a.active {
     border: none;
     font-size: 1.5em;
     cursor: pointer;
-    color: var(--text-color-primary);
+    color: var(--text-color-primary); /* Use primary text color for icons */
     padding: 5px;
     transition: color 0.3s ease;
 }
 
 .theme-toggle:hover, .menu-toggle:hover {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Gold on hover */
 }
 
 .theme-toggle .light-icon { display: block; }
@@ -161,7 +163,7 @@ main {
 
 h1 {
     font-size: 2.8em;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Gold for main headings */
     margin-bottom: 20px;
 }
 
@@ -208,7 +210,7 @@ p.section-description {
 .hero-text h1 {
     font-size: 3em;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Gold for hero heading */
 }
 
 .hero-text p {
@@ -233,21 +235,21 @@ p.section-description {
 }
 
 .primary-btn {
-    background-color: var(--button-primary-bg);
-    color: #ffffff;
+    background-color: var(--button-primary-bg); /* Gold button */
+    color: #1a1a1a; /* Black text on gold */
 }
 
 .primary-btn:hover {
-    background-color: var(--button-primary-hover);
+    background-color: var(--button-primary-hover); /* Darker gold on hover */
 }
 
 .secondary-btn {
-    background-color: var(--button-secondary-bg);
-    color: #ffffff;
+    background-color: var(--button-secondary-bg); /* Dark gray button */
+    color: #ffffff; /* White text on dark gray */
 }
 
 .secondary-btn:hover {
-    background-color: var(--button-secondary-hover);
+    background-color: var(--button-secondary-hover); /* Darker gray on hover */
 }
 
 /* Categories Grid */
@@ -263,7 +265,7 @@ p.section-description {
     padding: 20px;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
-    color: var(--primary-color);
+    color: var(--primary-color); /* Gold text for categories */
     font-weight: bold;
     font-size: 1.1em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -472,7 +474,7 @@ p.section-description {
 
 .contact-item .contact-icon {
     font-size: 3em;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Gold for contact icons */
     margin-bottom: 15px;
 }
 
@@ -487,7 +489,7 @@ p.section-description {
 }
 
 .contact-item a {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Gold for contact links */
     text-decoration: none;
     font-weight: bold;
 }
@@ -547,7 +549,7 @@ p.section-description {
 
 .contact-card-item .contact-card-icon {
     font-size: 2.5em;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Gold for contact icons */
     margin-bottom: 10px;
 }
 
@@ -568,7 +570,7 @@ p.section-description {
 }
 
 .contact-card-item a {
-    color: var(--accent-color); /* Use the new accent color for links */
+    color: var(--accent-color); /* Use the new accent color (gold) for links */
     text-decoration: none;
     font-weight: bold; /* Make the contact number/email bold */
     word-break: break-all; /* Allow long emails/numbers to break */
@@ -600,7 +602,7 @@ p.section-description {
 }
 
 .quote-form-container a {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Gold for links in quote form */
     text-decoration: none;
     font-weight: bold;
 }
@@ -612,7 +614,7 @@ p.section-description {
 
 /* Footer Layout CSS */
 footer {
-    background-color: var(--header-footer-bg);
+    background-color: var(--header-footer-bg); /* Black footer */
     color: var(--text-color-secondary);
     padding: 40px 0;
     border-top: 1px solid var(--border-color);
@@ -654,7 +656,7 @@ footer .contact-info p {
 
 footer .contact-info i {
     margin-right: 8px;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Gold icons in footer */
 }
 
 footer .contact-info a {
@@ -671,7 +673,7 @@ footer .contact-info a:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25D366; /* WhatsApp green */
+    background-color: #25D366; /* WhatsApp green - typically not part of brand but recognizable */
     color: white;
     border-radius: 50%;
     width: 60px;
@@ -702,7 +704,7 @@ footer .contact-info a:hover {
 }
 
 .scroll-btn {
-    background-color: var(--button-secondary-bg);
+    background-color: var(--button-secondary-bg); /* Dark gray scroll buttons */
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -718,7 +720,7 @@ footer .contact-info a:hover {
 }
 
 .scroll-btn:hover {
-    background-color: var(--button-secondary-hover);
+    background-color: var(--button-secondary-hover); /* Darker gray on hover */
     transform: translateY(-3px);
 }
 
@@ -731,8 +733,8 @@ footer .contact-info a:hover {
 }
 
 .chatbot-toggle-btn {
-    background-color: var(--button-primary-bg);
-    color: white;
+    background-color: var(--button-primary-bg); /* Gold button */
+    color: #1a1a1a; /* Black text on gold */
     padding: 10px 20px;
     border-radius: 30px;
     border: none;
@@ -744,7 +746,7 @@ footer .contact-info a:hover {
 }
 
 .chatbot-toggle-btn:hover {
-    background-color: var(--button-primary-hover);
+    background-color: var(--button-primary-hover); /* Darker gold on hover */
 }
 
 .chatbot-toggle-btn i {
@@ -769,8 +771,8 @@ footer .contact-info a:hover {
 }
 
 .chatbot-header {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--primary-color); /* Gold header for chatbot */
+    color: #1a1a1a; /* Black text on gold */
     padding: 10px 15px;
     display: flex;
     justify-content: space-between;
@@ -781,7 +783,7 @@ footer .contact-info a:hover {
 
 .chatbot-header h3 {
     margin: 0;
-    color: white;
+    color: #1a1a1a; /* Black text on gold */
     font-size: 1.1em;
 }
 
@@ -792,7 +794,7 @@ footer .contact-info a:hover {
 .chatbot-close-btn {
     background: none;
     border: none;
-    color: white;
+    color: #1a1a1a; /* Black close button on gold header */
     font-size: 1.2em;
     cursor: pointer;
 }
@@ -822,8 +824,8 @@ footer .contact-info a:hover {
 }
 
 .user-message {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--primary-color); /* Gold for user messages */
+    color: #1a1a1a; /* Black text on gold */
     align-self: flex-end;
     border-bottom-right-radius: 2px;
 }
@@ -846,8 +848,8 @@ footer .contact-info a:hover {
 }
 
 .chatbot-send-btn {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--primary-color); /* Gold send button */
+    color: #1a1a1a; /* Black icon on gold */
     border: none;
     border-radius: 50%;
     width: 40px;
@@ -860,7 +862,7 @@ footer .contact-info a:hover {
 }
 
 .chatbot-send-btn:hover {
-    background-color: var(--button-primary-hover);
+    background-color: var(--button-primary-hover); /* Darker gold on hover */
 }
 
 .chatbot-disclaimer {
