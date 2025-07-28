@@ -1,6 +1,6 @@
 /* General Body and Container Styles */
 :root {
-    --primary-color: #0056b3; /* A shade of blue */
+    --primary-color: #0056b3; /* A shade of blue - your main brand color */
     --secondary-color: #f8f9fa; /* Light gray */
     --background-color: #ffffff; /* White background for light mode */
     --text-color-primary: #333333; /* Dark gray for main text */
@@ -15,7 +15,7 @@
     --box-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.2);
     --card-background: #ffffff;
     --section-divider-color: #cccccc;
-    --accent-color: #FF8C00; /* A bright orange for contrast */
+    --accent-color: #FF8C00; /* A bright orange for contrast - used for contact links */
 }
 
 body.dark-mode {
@@ -45,7 +45,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color-primary);
     line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Ensure transitions are here */
 }
 
 .container {
@@ -203,14 +203,12 @@ p.section-description {
 
 .hero-text {
     margin-top: 30px;
-    /* Optional: Overlay text if image is dark */
-    /* position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); */
 }
 
 .hero-text h1 {
     font-size: 3em;
     margin-bottom: 15px;
-    color: var(--primary-color); /* Kept primary color for text outside image */
+    color: var(--primary-color);
 }
 
 .hero-text p {
@@ -579,6 +577,38 @@ p.section-description {
 .contact-card-item a:hover {
     text-decoration: underline;
 }
+
+/* Quote Form Container (Specific to get-quote.html) */
+.quote-form-container {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.quote-form-container p {
+    color: var(--text-color-secondary);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.quote-form-container strong {
+    color: var(--text-color-primary);
+}
+
+.quote-form-container a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.quote-form-container a:hover {
+    text-decoration: underline;
+}
+
 
 /* Footer Layout CSS */
 footer {
