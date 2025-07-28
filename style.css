@@ -2,40 +2,40 @@
 :root {
     /* Black and Gold Theme - Light Mode */
     --primary-color: #DAA520; /* Rich Gold - for accents, active states, important text */
-    --secondary-color: #f0f0f0; /* Very light gray - for subtle backgrounds */
+    --secondary-color: #e8e8e8; /* Slightly darker light gray - for subtle backgrounds */
     --background-color: #ffffff; /* White background for main content */
-    --text-color-primary: #1a1a1a; /* Deep Black for main text */
-    --text-color-secondary: #333333; /* Slightly lighter black for secondary text */
-    --header-footer-bg: #1a1a1a; /* Deep Black for header/footer background */
-    --border-color: #e0e0e0; /* Light gray for borders */
+    --text-color-primary: #212121; /* Softer Black for main text */
+    --text-color-secondary: #444444; /* Dark gray for secondary text */
+    --header-footer-bg: #212121; /* Softer Black for header/footer background */
+    --border-color: #dddddd; /* Light gray for borders */
     --button-primary-bg: #FFD700; /* Bright Gold for primary buttons */
     --button-primary-hover: #DAA520; /* Rich Gold on hover */
-    --button-secondary-bg: #555555; /* Dark gray for secondary buttons */
-    --button-secondary-hover: #333333; /* Darker gray on hover */
+    --button-secondary-bg: #666666; /* Medium gray for secondary buttons */
+    --button-secondary-hover: #444444; /* Darker gray on hover */
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly darker shadow for contrast */
     --box-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.3);
     --card-background: #ffffff; /* White cards */
-    --section-divider-color: #666666; /* Darker divider */
+    --section-divider-color: #999999; /* Darker divider */
     --accent-color: #FFD700; /* Consistent bright gold for various accents/links */
 }
 
 body.dark-mode {
     /* Black and Gold Theme - Dark Mode */
     --primary-color: #FFD700; /* Bright Gold - for accents, active states, important text */
-    --secondary-color: #333333; /* Dark gray */
+    --secondary-color: #3a3a3a; /* Slightly lighter dark gray */
     --background-color: #1a1a1a; /* Deep Black background */
-    --text-color-primary: #f8f9fa; /* Off-white text */
-    --text-color-secondary: #e0e0e0; /* Light gray text */
-    --header-footer-bg: #000000; /* Pure Black for header/footer background */
-    --border-color: #444444; /* Darker gray for borders */
+    --text-color-primary: #f0f0f0; /* Near white text */
+    --text-color-secondary: #cccccc; /* Medium light gray text */
+    --header-footer-bg: #0d0d0d; /* Even darker for full contrast with content */
+    --border-color: #555555; /* Darker gray for borders */
     --button-primary-bg: #FFD700; /* Bright Gold for primary buttons */
     --button-primary-hover: #DAA520; /* Rich Gold on hover */
-    --button-secondary-bg: #777777; /* Medium gray for secondary buttons */
-    --button-secondary-hover: #555555; /* Darker gray on hover */
+    --button-secondary-bg: #888888; /* Medium gray for secondary buttons */
+    --button-secondary-hover: #666666; /* Darker gray on hover */
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     --box-shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.6);
-    --card-background: #222222; /* Darker cards */
-    --section-divider-color: #444444; /* Darker divider */
+    --card-background: #2a2a2a; /* Darker cards */
+    --section-divider-color: #555555; /* Darker divider */
     --accent-color: #FFD700; /* Consistent bright gold for various accents/links */
 }
 
@@ -55,6 +55,19 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+/* Ensure all generic links have a proper color for visibility */
+a {
+    color: var(--primary-color); /* Default gold for all links unless overridden */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color); /* Maintain gold hover for consistency */
+    text-decoration: underline;
+}
+
 
 /* Header Styles */
 header {
@@ -236,7 +249,7 @@ p.section-description {
 
 .primary-btn {
     background-color: var(--button-primary-bg); /* Gold button */
-    color: #1a1a1a; /* Black text on gold */
+    color: var(--text-color-primary); /* Black text on gold */
 }
 
 .primary-btn:hover {
@@ -734,7 +747,7 @@ footer .contact-info a:hover {
 
 .chatbot-toggle-btn {
     background-color: var(--button-primary-bg); /* Gold button */
-    color: #1a1a1a; /* Black text on gold */
+    color: var(--text-color-primary); /* Black text on gold */
     padding: 10px 20px;
     border-radius: 30px;
     border: none;
@@ -772,7 +785,7 @@ footer .contact-info a:hover {
 
 .chatbot-header {
     background-color: var(--primary-color); /* Gold header for chatbot */
-    color: #1a1a1a; /* Black text on gold */
+    color: var(--text-color-primary); /* Black text on gold */
     padding: 10px 15px;
     display: flex;
     justify-content: space-between;
@@ -783,7 +796,7 @@ footer .contact-info a:hover {
 
 .chatbot-header h3 {
     margin: 0;
-    color: #1a1a1a; /* Black text on gold */
+    color: var(--text-color-primary); /* Black text on gold */
     font-size: 1.1em;
 }
 
@@ -794,7 +807,7 @@ footer .contact-info a:hover {
 .chatbot-close-btn {
     background: none;
     border: none;
-    color: #1a1a1a; /* Black close button on gold header */
+    color: var(--text-color-primary); /* Black close button on gold header */
     font-size: 1.2em;
     cursor: pointer;
 }
@@ -825,7 +838,7 @@ footer .contact-info a:hover {
 
 .user-message {
     background-color: var(--primary-color); /* Gold for user messages */
-    color: #1a1a1a; /* Black text on gold */
+    color: var(--text-color-primary); /* Black text on gold */
     align-self: flex-end;
     border-bottom-right-radius: 2px;
 }
@@ -849,7 +862,7 @@ footer .contact-info a:hover {
 
 .chatbot-send-btn {
     background-color: var(--primary-color); /* Gold send button */
-    color: #1a1a1a; /* Black icon on gold */
+    color: var(--text-color-primary); /* Black icon on gold */
     border: none;
     border-radius: 50%;
     width: 40px;
