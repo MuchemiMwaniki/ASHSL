@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Catalogue - AutoServe Holdings Ltd</title>
+    <title>Catalogue - AutoServe Holdings Ltd</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -21,7 +21,7 @@
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="catalogue.html" class="active">Catalogue</a></li> <li><a href="get-quote.html">Get a Quote</a></li>
+                    <li><a href="catalogue.html" class="active">Catalogue</a></li> <li><a href="quote.html">Get a Quote</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
@@ -38,68 +38,100 @@
     <main>
         <section class="section banner-section">
             <div class="container">
-                <img src="Autoserve Banner 2.png" alt="Auto Parts Catalogue Banner" class="section-banner-image">
+                <img src="Autoserve Banner 2.png" alt="Catalogue Banner" class="section-banner-image">
             </div>
         </section>
 
         <section class="section">
             <div class="container">
                 <h2>Our Product Catalogue</h2>
-                <p class="section-description">Explore our extensive range of high-quality auto parts and accessories. We stock genuine and aftermarket parts for various vehicle makes and models.</p>
+                <p class="section-description">Browse our extensive range of high-quality auto parts and accessories. Use the categories below to quickly find what you need or scroll through our popular products.</p>
+
+                <div class="categories-grid">
+                    <div class="category-item">Engine Parts</div>
+                    <div class="category-item">Braking Systems</div>
+                    <div class="category-item">Suspension & Steering</div>
+                    <div class="category-item">Electrical & Lighting</div>
+                    <div class="category-item">Body & Exterior</div>
+                    <div class="category-item">Interior Accessories</div>
+                    <div class="category-item">Filters & Fluids</div>
+                    <div class="category-item">Transmissions</div>
+                </div>
 
                 <div class="product-grid">
                     <div class="product-card">
                         <div class="product-image-container">
-                            <img src="ProductImages/ac-filter-87139-front.jpeg" alt="A/C Cabin Filter Front View" class="main-product-image">
-                            <img src="ProductImages/ac-filter-87139-top.jpeg" alt="A/C Cabin Filter Top View" class="hover-product-image">
+                            <img src="catalogue-img-1.png" alt="Engine Oil Filter" class="main-product-image">
+                            <img src="catalogue-img-1-hover.png" alt="Engine Oil Filter Detail" class="hover-product-image">
                         </div>
-                        <h3>A/C Cabin Filter</h3>
-                        <p>High-quality A/C Cabin Filter, Part Number: 87139-06050. Ensures clean and fresh air inside your vehicle.</p>
-                        <span class="product-price">Ksh 600</span>
-                        <a href="get-quote.html" class="btn primary-btn small-btn">Enquire Now</a>
-                    </div>
-
-                    <div class="product-card">
-                        <img src="engine-filter.png" alt="Engine Oil Filter" class="product-image">
                         <h3>Engine Oil Filter</h3>
-                        <p>High-efficiency oil filter designed for optimal engine protection and longevity. Compatible with various sedan models.</p>
-                        <span class="product-price">Ksh 1,500</span>
-                        <a href="get-quote.html" class="btn primary-btn small-btn">Enquire Now</a>
+                        <p>High-efficiency oil filter for cleaner engine performance and extended engine life.</p>
+                        <a href="get-quote.html" class="btn primary-btn small-btn">Get Quote</a>
                     </div>
 
                     <div class="product-card">
-                        <img src="brake-pads.png" alt="Ceramic Brake Pads" class="product-image">
-                        <h3>Ceramic Brake Pads</h3>
-                        <p>Premium ceramic brake pads offering superior stopping power, reduced dust, and quiet operation. For SUVs and trucks.</p>
-                        <span class="product-price">Ksh 4,800</span>
-                        <a href="get-quote.html" class="btn primary-btn small-btn">Enquire Now</a>
+                        <div class="product-image-container">
+                            <img src="catalogue-img-2.png" alt="Brake Pads Set" class="main-product-image">
+                            <img src="catalogue-img-2-hover.png" alt="Brake Pads Set Detail" class="hover-product-image">
+                        </div>
+                        <h3>Brake Pads Set</h3>
+                        <p>Premium ceramic brake pads offering superior stopping power and reduced dust.</p>
+                        <a href="get-quote.html" class="btn primary-btn small-btn">Get Quote</a>
                     </div>
 
                     <div class="product-card">
-                        <img src="shock-absorber.png" alt="Heavy Duty Shock Absorber" class="product-image">
-                        <h3>Heavy Duty Shock Absorber</h3>
-                        <p>Robust shock absorber for enhanced stability and comfort on rough terrains. Ideal for 4x4 vehicles.</p>
-                        <span class="product-price">Ksh 8,200</span>
-                        <a href="get-quote.html" class="btn primary-btn small-btn">Enquire Now</a>
+                        <div class="product-image-container">
+                            <img src="catalogue-img-3.png" alt="Shock Absorber" class="main-product-image">
+                            <img src="catalogue-img-3-hover.png" alt="Shock Absorber Detail" class="hover-product-image">
+                        </div>
+                        <h3>Shock Absorber</h3>
+                        <p>Heavy-duty shock absorber for enhanced ride comfort and vehicle stability.</p>
+                        <a href="get-quote.html" class="btn primary-btn small-btn">Get Quote</a>
                     </div>
 
                     <div class="product-card">
-                        <img src="spark-plugs.png" alt="Iridium Spark Plugs (Set of 4)" class="product-image">
-                        <h3>Iridium Spark Plugs (Set of 4)</h3>
-                        <p>Iridium spark plugs for improved fuel efficiency and reliable ignition. Long-lasting performance.</p>
-                        <span class="product-price">Ksh 3,000</span>
-                        <a href="get-quote.html" class="btn primary-btn small-btn">Enquire Now</a>
+                        <div class="product-image-container">
+                            <img src="catalogue-img-4.png" alt="Car Battery" class="main-product-image">
+                            <img src="catalogue-img-4-hover.png" alt="Car Battery Detail" class="hover-product-image">
+                        </div>
+                        <h3>Car Battery</h3>
+                        <p>Long-lasting automotive battery with high cold cranking amps for reliable starts.</p>
+                        <a href="get-quote.html" class="btn primary-btn small-btn">Get Quote</a>
                     </div>
 
                     <div class="product-card">
-                        <img src="air-filter.png" alt="Cabin Air Filter" class="product-image">
-                        <h3>Cabin Air Filter</h3>
-                        <p>Ensures clean and fresh air inside your vehicle by filtering out dust, pollen, and pollutants.</p>
-                        <span class="product-price">Ksh 950</span>
-                        <a href="get-quote.html" class="btn primary-btn small-btn">Enquire Now</a>
+                        <div class="product-image-container">
+                            <img src="catalogue-img-5.png" alt="Air Filter" class="main-product-image">
+                            <img src="catalogue-img-5-hover.png" alt="Air Filter Detail" class="hover-product-image">
+                        </div>
+                        <h3>Air Filter</h3>
+                        <p>Engine air filter designed to trap dust and debris, optimizing engine airflow.</p>
+                        <a href="get-quote.html" class="btn primary-btn small-btn">Get Quote</a>
                     </div>
 
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="catalogue-img-6.png" alt="Spark Plugs Set" class="main-product-image">
+                            <img src="catalogue-img-6-hover.png" alt="Spark Plugs Set Detail" class="hover-product-image">
+                        </div>
+                        <h3>Spark Plugs Set</h3>
+                        <p>Iridium spark plugs for efficient combustion and improved fuel economy.</p>
+                        <a href="get-quote.html" class="btn primary-btn small-btn">Get Quote</a>
                     </div>
+                </div>
+
+                <div class="stock-highlights">
+                    <h3>Stock Highlights</h3>
+                    <p>We consistently update our inventory to ensure availability of high-demand parts. Here are some of our currently highlighted stock items:</p>
+                    <ul>
+                        <li>**Toyota Spares:** Comprehensive range for popular models like Axio, Fielder, Vitz, and Prado.</li>
+                        <li>**Nissan Parts:** Extensive selection for X-Trail, Navara, Tiida, and Sylphy.</li>
+                        <li>**Mercedes-Benz Components:** Specialist parts for C-Class, E-Class, and GLC models.</li>
+                        <li>**Isuzu D-Max & NPR Parts:** Robust parts for commercial and heavy-duty vehicles.</li>
+                        <li>**Honda & Subaru Spares:** Including parts for Fit, CR-V, Impreza, and Forester.</li>
+                    </ul>
+                    <p>If you don't see what you're looking for, don't hesitate to use our "Get a Quote" service!</p>
+                </div>
             </div>
         </section>
 
@@ -107,13 +139,19 @@
 
         <section class="section">
             <div class="container">
-                <h2>Can't Find What You Need?</h2>
-                <p class="section-description">Our catalogue is regularly updated, but if you don't see the specific part you're looking for, don't hesitate to reach out!</p>
-                <a href="get-quote.html" class="btn primary-btn">Request a Custom Quote</a>
+                <h2>Our Trusted Product Brands</h2>
+                <p class="section-description">We partner with leading global manufacturers to bring you only the best auto parts. Here are some of the product brands we proudly supply:</p>
+
+                <div class="brands-grid">
+                    <img src="Product Logos/Kyb.png" alt="KYB Logo">
+                    <img src="Product Logos/Gsp.png" alt="GSP Logo">
+                    <img src="Product Logos/Asimco.png" alt="Asimco Logo">
+                    <img src="Product Logos/Triple Five.png" alt="Triple Five Logo">
+                    <img src="Product Logos/Toyota Genuine.png" alt="Toyota Genuine Logo">
+                    </div>
             </div>
         </section>
-
-    </main>
+        </main>
 
     <footer>
         <div class="container">
