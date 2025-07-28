@@ -1,193 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autoserve & HW Supplies ltd - Your Premier Auto Parts Partner</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png" type="image/png"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASHSL - Auto Serve & Hardware Supplies</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root {
+      --primary-color: gold;
+      --background-color: #000;
+      --text-color: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: var(--primary-color);
+    }
+
+    nav a {
+      color: var(--primary-color);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      background: url('banner.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--background-color);
+      text-shadow: 2px 2px 5px var(--primary-color);
+    }
+
+    .hero h2 {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h3 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: #111;
+      border: 1px solid var(--primary-color);
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-card h4 {
+      margin-top: 10px;
+      color: var(--primary-color);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: var(--primary-color);
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="favicon.png" alt="Autoserve & HW Supplies ltd Logo" class="header-logo-img"> <span class="site-title">Autoserve & HW Supplies ltd</span>
-                </a>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="catalogue.html">Catalogue</a></li>
-                    <li><a href="get-quote.html">Get a Quote</a></li> <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <button class="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-sun light-icon"></i>
-                <i class="fas fa-moon dark-icon"></i>
-            </button>
-            <button class="menu-toggle" aria-label="Open menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
+  <header>
+    <h1>ASHSL</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="parts.html">Parts</a>
+      <a href="quote.html">Quote</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-        <section class="hero-section">
-            <div class="container">
-                <img src="Home Page Banner.png" alt="Autoserve & HW Supplies ltd Home Page Banner" class="hero-image">
-                <div class="hero-text">
-                    <h1>Your Premier Partner for Quality Auto Parts in Kenya</h1>
-                    <p>Discover a vast selection of genuine and certified aftermarket auto parts for all makes and models. Quality, reliability, and affordability, delivered right to your door.</p>
-                </div>
-                <div class="hero-buttons">
-                    <a href="catalogue.html" class="btn primary-btn">Explore Catalogue</a>
-                    <a href="get-quote.html" class="btn secondary-btn">Get a Quote</a> </div>
-            </div>
-        </section>
+  <section class="hero">
+    <h2>Your One-Stop Vehicle Spare Parts Hub</h2>
+  </section>
 
-        <section class="section">
-            <div class="container">
-                <h2>Why Choose Autoserve & HW Supplies ltd?</h2>
-                <p class="section-description">We are dedicated to providing an unparalleled experience for all your auto parts needs.</p>
-                <div class="categories-grid">
-                    <div class="category-item">Extensive Inventory</div>
-                    <div class="category-item">Quality Assurance</div>
-                    <div class="category-item">Competitive Pricing</div>
-                    <div class="category-item">Expert Support</div>
-                    <div class="category-item">Fast Delivery</div>
-                    <div class="category-item">Customer Satisfaction</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-divider"></section>
-
-        <section class="section">
-            <div class="container">
-                <h2>Key Features & Services</h2>
-                <div class="feature-explanation">
-                    <p>At Autoserve & HW Supplies ltd, we go beyond just supplying parts. We offer a comprehensive service designed to make your experience seamless:</p>
-                    <ul>
-                        <li>**Wide Range of Products:** From engine components to body parts, braking systems to electricals – if your vehicle needs it, we likely have it.</li>
-                        <li>**Easy Online Catalogue:** Browse our extensive inventory with detailed descriptions and high-quality images.</li>
-                        <li>**Quick Quote System:** Can't find what you need or want a custom price? Our "Get a Quote" feature makes it simple.</li>
-                        <li>**Nationwide Delivery:** We deliver across Kenya, ensuring your parts reach you quickly and efficiently.</li>
-                        <li>**Dedicated Customer Support:** Our team is ready to assist you with inquiries, technical advice, and order tracking.</li>
-                        <li>**Genuine & Aftermarket Options:** We provide both original equipment manufacturer (OEM) parts and high-quality certified aftermarket alternatives to suit every budget and need.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-divider"></section>
-
-        <section class="section quick-contacts-section">
-            <div class="container">
-                <h2>Quick Contacts</h2>
-                <p class="section-description">Have a question or need a part urgently? Reach out to us!</p>
-                <div class="contact-cards-grid">
-                    <div class="contact-card-item">
-                        <i class="fas fa-phone-volume contact-card-icon"></i>
-                        <p><strong>Enquiries:</strong> <a href="tel:+254734860036">0734860036</a></p>
-                    </div>
-                    <div class="contact-card-item">
-                        <i class="fas fa-phone-alt contact-card-icon"></i>
-                        <p><strong>Sales:</strong> <a href="tel:+254733809387">0733809387</a></p>
-                    </div>
-                    <div class="contact-card-item">
-                        <i class="fas fa-user-tie contact-card-icon"></i>
-                        <p><strong>Admin:</strong> <a href="tel:+254799895876">0799895876</a></p>
-                    </div>
-                    <div class="contact-card-item">
-                        <i class="fab fa-whatsapp contact-card-icon"></i>
-                        <p><strong>WhatsApp:</strong> <a href="https://wa.me/254799495876" target="_blank">0799495876</a></p>
-                    </div>
-                    <div class="contact-card-item">
-                        <i class="fas fa-envelope contact-card-icon"></i>
-                        <p><strong>Email:</strong> <a href="mailto:autoservenhw@yahoo.com">autoservenhw@yahoo.com</a></p>
-                    </div>
-                    <div class="contact-card-item">
-                        <i class="fas fa-location-arrow contact-card-icon"></i>
-                        <p><strong>Location:</strong> Daresalaam Road next to trade con</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-divider"></section>
-
-        <section class="section">
-            <div class="container">
-                <h2>Our Trusted Brands</h2>
-                <p class="section-description">We partner with leading global manufacturers to bring you only the best. Here are some of the brands we proudly supply:</p>
-
-                <div class="brands-grid">
-                    <img src="Car Logos/Toyota.png" alt="Toyota Logo">
-                    <img src="Car Logos/Subaru.png" alt="Subaru Logo">
-                    <img src="Car Logos/Nissan.png" alt="Nissan Logo">
-                    <img src="Car Logos/Mitsubishi.png" alt="Mitsubishi Logo">
-                    <img src="Car Logos/Honda.png" alt="Honda Logo">
-                    <img src="Car Logos/Mazda.png" alt="Mazda Logo">
-                    </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="container footer-content-wrapper">
-            <div class="footer-section company-info">
-                <p>© <span id="current-year"></span> Autoserve & HW Supplies ltd. All rights reserved.</p>
-            </div>
-            <div class="footer-section contact-info">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Location: Daresalaam Road next to trade con</p>
-                <p><i class="fas fa-envelope"></i> Email: autoservenhw@yahoo.com</p>
-                <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/254799495876" target="_blank">0799495876</a></p>
-                <p><i class="fas fa-phone"></i> Enquiries: <a href="tel:+254734860036">0734860036</a></p>
-                <p><i class="fas fa-phone"></i> Sales: <a href="tel:+254733809387">0733809387</a></p>
-                <p><i class="fas fa-phone"></i> Admin: <a href="tel:+254799895876">0799895876</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/254799495876" class="whatsapp-btn" aria-label="Chat on WhatsApp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <div class="scroll-buttons">
-        <button id="scrollToTopBtn" class="scroll-btn" aria-label="Scroll to top">
-            <i class="fas fa-chevron-up"></i>
-        </button>
-        <button id="scrollToBottomBtn" class="scroll-btn scroll-to-bottom" aria-label="Scroll to bottom">
-            <i class="fas fa-chevron-down"></i>
-        </button>
+  <section class="section">
+    <h3>Featured Products</h3>
+    <div class="products">
+      <div class="product-card">
+        <img src="suspension1.jpg" alt="Suspension Part">
+        <h4>Shock Absorber</h4>
+        <p>KES 4,500</p>
+      </div>
+      <div class="product-card">
+        <img src="engine1.jpg" alt="Engine Part">
+        <h4>Timing Belt</h4>
+        <p>KES 2,800</p>
+      </div>
+      <div class="product-card">
+        <img src="accessory1.jpg" alt="Vehicle Accessory">
+        <h4>Floor Mats Set</h4>
+        <p>KES 3,000</p>
+      </div>
     </div>
+  </section>
 
-    <div class="chatbot-container">
-        <button class="chatbot-toggle-btn" id="chatbotToggle">
-            <i class="fas fa-robot"></i> AI Assistant
-        </button>
-        <div class="chatbot-popup" id="chatbotPopup">
-            <div class="chatbot-header">
-                <h3><i class="fas fa-robot"></i> AutoServe AI</h3>
-                <button class="chatbot-close-btn" id="chatbotClose">×</button>
-            </div>
-            <div class="chatbot-messages" id="chatbotMessages">
-                <div class="message bot-message">Hello! How can I assist you with auto parts today?</div>
-            </div>
-            <div class="chatbot-input-area">
-                <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Type your message...">
-                <button id="chatbotSend" class="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
-            </div>
-            <div class="chatbot-disclaimer">
-                This is an AI assistant and may not always provide accurate information.
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+  <footer>
+    &copy; 2025 ASHSL - Auto Serve & Hardware Supplies. All Rights Reserved.
+  </footer>
 </body>
+
 </html>
