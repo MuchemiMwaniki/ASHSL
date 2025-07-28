@@ -22,8 +22,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="catalogue.html">Catalogue</a></li>
-                    <li><a href="get-quote.html" class="active">Get a Quote</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="get-quote.html" class="active">Get a Quote</a></li> <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
             <button class="theme-toggle" aria-label="Toggle theme">
@@ -37,67 +36,66 @@
     </header>
 
     <main>
+        <section class="section banner-section">
+            <div class="container">
+                <img src="Autoserve Banner 2.png" alt="Get a Quote Banner" class="section-banner-image">
+            </div>
+        </section>
+
         <section class="section">
             <div class="container">
                 <h2>Request a Quote</h2>
-                <p class="section-description">Fill out the form below to get a personalized quote for the auto parts you need. Our team will get back to you promptly.</p>
+                <p class="section-description">Fill out the form below with as much detail as possible. Our team will get back to you with a competitive quote shortly.</p>
 
                 <form class="quote-form" action="#" method="POST">
                     <div class="form-group">
-                        <label for="name">Your Name:</label>
+                        <label for="name">Your Full Name</label>
                         <input type="text" id="name" name="name" required placeholder="John Doe">
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Your Email:</label>
+                        <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" required placeholder="john.doe@example.com">
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone Number (Optional):</label>
+                        <label for="phone">Phone Number (Optional)</label>
                         <input type="text" id="phone" name="phone" placeholder="+254 7XX XXX XXX">
                     </div>
 
                     <div class="form-group">
-                        <label for="vehicle-make">Vehicle Make:</label>
-                        <input type="text" id="vehicle-make" name="vehicle-make" required placeholder="e.g., Toyota, Mercedes-Benz, Ford">
+                        <label for="vehicle-make">Vehicle Make</label>
+                        <input type="text" id="vehicle-make" name="vehicle-make" required placeholder="Toyota, Honda, Mercedes, etc.">
                     </div>
 
                     <div class="form-group">
-                        <label for="vehicle-model">Vehicle Model:</label>
-                        <input type="text" id="vehicle-model" name="vehicle-model" required placeholder="e.g., Corolla, C200, Ranger">
+                        <label for="vehicle-model">Vehicle Model</label>
+                        <input type="text" id="vehicle-model" name="vehicle-model" required placeholder="Camry, Civic, C-Class, etc.">
                     </div>
 
                     <div class="form-group">
-                        <label for="year-of-manufacture">Year of Manufacture:</label>
-                        <input type="text" id="year-of-manufacture" name="year-of-manufacture" placeholder="e.g., 2015">
-                        <small>Provide the exact year or range.</small>
+                        <label for="chassis-number">Chassis Number (Optional)</label>
+                        <input type="text" id="chassis-number" name="chassis-number" placeholder="JBLXXXXXXXXXXXXXXX">
+                        <small>Providing your chassis number helps us find the exact part for your vehicle.</small>
                     </div>
 
                     <div class="form-group">
-                        <label for="part-needed">Part(s) Needed:</label>
-                        <textarea id="part-needed" name="part-needed" rows="5" required placeholder="e.g., Front brake pads, Left headlight assembly, Engine oil filter (Part No: 12345-ABC)"></textarea>
-                        <small>Be as specific as possible. Include part numbers if known.</small>
+                        <label for="part-details">Part Details / Description</label>
+                        <textarea id="part-details" name="part-details" rows="5" required placeholder="E.g., Front brake pads, left headlight assembly, air filter."></textarea>
                     </div>
 
-                    <div class="form-group">
-                        <label for="urgency">Urgency:</label>
-                        <select id="urgency" name="urgency">
-                            <option value="standard">Standard (3-5 business days)</option>
-                            <option value="urgent">Urgent (1-2 business days - may incur extra charges)</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn primary-btn">Submit Quote Request</button>
-                    <p class="form-note">Please note: This is a quote request, not a final order. We will contact you with pricing and availability.</p>
+                    <button type="submit" class="btn primary-btn">Submit Request</button>
                 </form>
+
+                <p class="form-note">Your information is confidential and will only be used to process your quote request.</p>
+
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="current-year"></span> AutoServe Holdings Ltd. All rights reserved.</p>
+            <p>© <span id="current-year"></span> AutoServe Holdings Ltd. All rights reserved.</p>
         </div>
     </footer>
 
@@ -121,7 +119,7 @@
         <div class="chatbot-popup" id="chatbotPopup">
             <div class="chatbot-header">
                 <h3><i class="fas fa-robot"></i> AutoServe AI</h3>
-                <button class="chatbot-close-btn" id="chatbotClose">&times;</button>
+                <button class="chatbot-close-btn" id="chatbotClose">×</button>
             </div>
             <div class="chatbot-messages" id="chatbotMessages">
                 <div class="message bot-message">Hello! How can I assist you with auto parts today?</div>
